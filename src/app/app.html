@@ -1,12 +1,9 @@
 <!--bg-[#6F574E] bg-zinc-600 -->
-<main class="relative w-full min-h-screen bg-zinc-900 font-mono p-6 overflow-hidden">
-  <!-- Contenedor centralizado con ancho máximo (al estilo jezerm.dev) -->
-  <!-- Mancha superior izquierda (Color café/terracota #927869 muy difuminado) -->
-  <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#927869]/25 rounded-full blur-3xl pointer-events-none"></div>
-
-  <div class="absolute -top-16 right-70 w-[500px] h-[700px] opacity-10 pointer-events-none overflow-hidden">
+<main class="relative w-full min-h-screen bg-zinc-900 font-mono text-white p-6 overflow-hidden">
+  
+  <div class="absolute -top-5 right-200 w-[400px] h-[500px] opacity-10 pointer-events-none overflow-hidden">
     <!-- Tu imagen. object-cover estira la textura para cubrir el contenedor -->
-    <img src="/assets/volcano_texture2.png" alt="Lava Texture" class="w-full h-full object-cover rounded-full [mask-image:radial-gradient(circle,_black_1%,_transparent_80%)]">
+    <img src="/assets/diablo.jpg" alt="Lava Texture" class="w-full h-full object-cover rounded-full [mask-image:radial-gradient(circle,_black_1%,_transparent_80%)]">
   </div>
   
   <!-- Opcional: Una segunda mancha con la misma textura más abajo para equilibrar -->
@@ -14,11 +11,7 @@
     <img src="/assets/volcano_texture2.png" alt="Lava Texture" class="w-full h-full object-cover rounded-full [mask-image:radial-gradient(circle,_black_1%,_transparent_80%)]">
   </div>
 
-  <!-- Mancha central / derecha (Otro tono cálido para dar riqueza visual) -->
-  <!-- Mancha inferior izquierda -->
-  <div class="absolute top-1/2 -right-32 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="absolute -bottom-32 left-1/3 w-[450px] h-[450px] bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="max-w-4xl mx-auto space-y-6">
 
@@ -46,7 +39,7 @@
       </div>
 
       <!-- Description card -->
-      <div class="bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] w-full mt-4 text-left border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] w-full mt-4 text-left border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <p>Computer Engineer from the University of Las Palmas de Gran Canaria with professional experience as a full-stack developer
            in the automotive sector. At Aplicaciones Informáticas Domingo Alonso I worked on migrating the SIMA DMS platform to the web,
             moving business logic from SQL stored procedures to C# with .NET, and integrating systems with ERPs and tax authorities 
@@ -56,12 +49,12 @@
 
     <!-- Container for experience and personal data -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">Experience</h2>
         <p class="mb-2">Associate Engineer at Aplicaciones Informáticas Domingo Alonso (08/2025 - 08/2026)</p>
         <p>Intern Engineer at Aplicaciones Informáticas Domingo Alonso (06/2024 - 08/2024)</p>      
       </div>
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">Personal Data</h2>
         <p>Location: Las Palmas de Gran Canaria, Spain</p>
         <p>Phone: +34 612 345 678</p>
@@ -71,13 +64,13 @@
 
     <!-- Skills Container 1 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">Frontend</h2>
         <p>Languages: HTML, CSS, Typescript, Javascript</p>
         <p>Frameworks: Angular, React</p>
         <p>Styles: Tailwind CSS, Bootstrap</p>
       </div>
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">Backend</h2>
         <p>Languages: C#, Java, Python</p>
         <p>Frameworks: .NET, ASP .NET Core, Entity Framework Core, FastAPI</p>
@@ -87,19 +80,19 @@
 
     <!-- Skills Container 2 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">Databases</h2>
         <p>SQL Server</p>
         <p>PostgreSQL</p>
         <p>Firebase</p>
         <p>Supabase</p>
       </div>
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">Artificial Intelligence</h2>
         <p>LangChain</p>
         <p>LangSmith</p>
       </div>
-      <div class="flex flex-col bg-[#927869]/80 backdrop-blur-sm p-5 rounded-[10px] border border-white/20 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
+      <div class="flex flex-col bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] border border-white/40 shadow-lg hover:shadow-2x1 hover:-translate-y-1 transition-all duration-300">
         <h2 class="font-bold text-lg mb-2">DevOps</h2>
         <p>Git</p>
         <p>GitHub</p>
