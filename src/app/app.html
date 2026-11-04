@@ -3,8 +3,18 @@
   <!-- Contenedor centralizado con ancho máximo (al estilo jezerm.dev) -->
   <!-- Mancha superior izquierda (Color café/terracota #927869 muy difuminado) -->
   <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#927869]/25 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="absolute -top-16 right-70 w-[500px] h-[700px] opacity-10 pointer-events-none overflow-hidden">
+    <!-- Tu imagen. object-cover estira la textura para cubrir el contenedor -->
+    <img src="/assets/volcano_texture2.png" alt="Lava Texture" class="w-full h-full object-cover rounded-full [mask-image:radial-gradient(circle,_black_1%,_transparent_80%)]">
+  </div>
+  
+  <!-- Opcional: Una segunda mancha con la misma textura más abajo para equilibrar -->
+  <div class="absolute bottom-1/4 left-1/4 w-[400px] h-[500px] opacity-10 pointer-events-none overflow-hidden rounded-full">
+    <img src="/assets/volcano_texture2.png" alt="Lava Texture" class="w-full h-full object-cover rounded-full [mask-image:radial-gradient(circle,_black_1%,_transparent_80%)]">
+  </div>
+
   <!-- Mancha central / derecha (Otro tono cálido para dar riqueza visual) -->
-  <div class="absolute -top-20 right-10 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl pointer-events-none"></div>
   <!-- Mancha inferior izquierda -->
   <div class="absolute top-1/2 -right-32 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
