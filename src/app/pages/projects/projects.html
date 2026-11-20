@@ -1,1 +1,48 @@
-<p>projects works!</p>
+<main class="min-h-screen bg-zinc-900 text-[#e6d5c3] py-12 px-4 flex flex-col items-center">
+  
+  <div class="w-full max-w-4xl space-y-8">
+    
+    <!-- Cabecera de la sección -->
+    <div class="text-center space-y-2">
+      <h1 class="text-2xl font-semibold tracking-wide">Projects</h1>
+      <p class="text-sm text-[#b39e88]">A selection of my most remarkable projects as a developer.</p>
+    </div>
+
+    <!-- Grid de Proyectos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      @for (project of projects; track project.title) {
+        <div class="bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] w-full mt-4 text-left border border-white/40 shadow-lg hover:shadow-2x1 hover:shadow-white/20 transition-all duration-300">
+          
+          <!-- Info del proyecto -->
+          <div class="space-y-2">
+            <h2 class="text-lg font-medium text-white">{{ project.title }}</h2>
+            <p class="text-xs md:text-sm text-[#d4c4b2] leading-relaxed">{{ project.description }}</p>
+          </div>
+
+          <!-- Tecnologías usadas -->
+          <div class="flex flex-wrap gap-2">
+            @for (tech of project.technologies; track tech) {
+              <span class="text-[10px] bg-[#1a1716] text-[#b39e88] px-2.5 py-1 rounded-full border border-[#3d332d]">
+                {{ tech }}
+              </span>
+            }
+          </div>
+
+          <!-- Enlaces -->
+          <div class="flex items-center space-x-4 pt-2 border-t border-[#3d332d]/50">
+            <a [href]="project.githubUrl" target="_blank" class="text-xs text-[#b39e88] hover:text-white transition-colors flex items-center gap-1">
+              <span>GitHub ↗</span>
+            </a>
+            @if (project.liveDemoUrl) {
+              <a [href]="project.liveDemoUrl" target="_blank" class="text-xs text-[#b39e88] hover:text-white transition-colors flex items-center gap-1">
+                <span>Demo En Vivo ↗</span>
+              </a>
+            }
+          </div>
+
+        </div>
+      }
+    </div>
+
+  </div>
+</main>
