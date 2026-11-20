@@ -1,17 +1,17 @@
-<main class="min-h-screen bg-zinc-900 text-[#e6d5c3] py-12 px-4 flex flex-col items-center">
+<section class="min-h-screen bg-zinc-900 text-[#e6d5c3] py-12 px-4 flex flex-col items-center">
   
   <div class="w-full max-w-4xl space-y-8">
     
     <!-- Cabecera de la sección -->
     <div class="text-center space-y-2">
-      <h1 class="text-2xl font-semibold tracking-wide">Projects</h1>
+      <h2 class="text-2xl font-semibold tracking-wide">Projects</h2>
       <p class="text-sm text-[#b39e88]">A selection of my most remarkable projects as a developer.</p>
     </div>
 
     <!-- Grid de Proyectos -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       @for (project of projects; track project.title) {
-        <div class="bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] w-full mt-4 text-left border border-white/40 shadow-lg hover:shadow-2x1 hover:shadow-white/20 transition-all duration-300">
+        <div class="bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] w-full mt-4 text-left border border-white/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 transition-all duration-300">
           
           <!-- Info del proyecto -->
           <div class="space-y-2">
@@ -30,12 +30,12 @@
 
           <!-- Enlaces -->
           <div class="flex items-center space-x-4 pt-2 border-t border-[#3d332d]/50">
-            <a [href]="project.githubUrl" target="_blank" class="text-xs text-[#b39e88] hover:text-white transition-colors flex items-center gap-1">
+            <a [href]="project.githubUrl" target="_blank" class="text-xs text-[#b39e88] hover:text-white transition-colors flex items-center gap-1" rel="noopener noreferrer">
               <span>GitHub ↗</span>
             </a>
             @if (project.liveDemoUrl) {
-              <a [href]="project.liveDemoUrl" target="_blank" class="text-xs text-[#b39e88] hover:text-white transition-colors flex items-center gap-1">
-                <span>Demo En Vivo ↗</span>
+              <a [href]="project.liveDemoUrl" target="_blank" class="text-xs text-[#b39e88] hover:text-white transition-colors flex items-center gap-1" rel="noopener noreferrer">
+                <span>Live Demo ↗</span>
               </a>
             }
           </div>
@@ -45,4 +45,4 @@
     </div>
 
   </div>
-</main>
+</section>
