@@ -1,17 +1,17 @@
-<section class="min-h-screen bg-zinc-900 text-[#e6d5c3] py-12 px-4 flex flex-col items-center">
+<section class="min-h-screen bg-zinc-900 text-[#e6d5c3] py-8 px-4 sm:py-12 flex flex-col items-center">
   
-  <div class="w-full max-w-4xl space-y-8">
+  <div class="w-full max-w-4xl space-y-6 sm:space-y-8">
     
     <!-- Cabecera de la sección -->
     <div class="text-center space-y-2">
-      <h2 class="text-2xl font-semibold tracking-wide">Projects</h2>
+      <h2 class="text-xl sm:text-2xl font-semibold tracking-wide">Projects</h2>
       <p class="text-sm text-[#b39e88]">A selection of my most remarkable projects as a developer.</p>
     </div>
 
     <!-- Grid de Proyectos -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
       @for (project of projects; track project.title) {
-        <div class="bg-zinc-900/10 backdrop-blur-sm p-5 rounded-[10px] w-full mt-4 text-left border border-white/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 transition-all duration-300">
+        <div class="bg-zinc-900/10 backdrop-blur-sm p-4 sm:p-5 rounded-[10px] w-full mt-4 text-left border border-white/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 transition-all duration-300">
           
           <!-- Info del proyecto -->
           <div class="space-y-2">
