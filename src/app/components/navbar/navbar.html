@@ -1,0 +1,66 @@
+<nav aria-label="Main navigation" class="sticky top-0 z-50 w-full bg-zinc-900/95 backdrop-blur-md border-b border-white/20 font-mono text-white">
+  <div class="max-w-4xl mx-auto h-16 px-4 sm:px-6 flex items-center justify-between">
+
+    <a routerLink="/" (click)="closeMenu()" class="flex items-center gap-2 text-sm sm:text-base font-bold hover:opacity-80 transition-opacity">
+      <span>Daniel Díaz</span>
+      <span class="text-[#b39e88]" aria-hidden="true">/</span>
+    </a>
+
+    <div class="hidden sm:flex items-center gap-1">
+      <a routerLink="/" routerLinkActive="bg-white/10 text-[#e6d5c3]" [routerLinkActiveOptions]="{ exact: true }"
+        class="px-3 py-2 rounded-[10px] text-sm transition-colors hover:bg-white/10 hover:opacity-80">Home</a>
+      <a routerLink="/projects" routerLinkActive="bg-white/10 text-[#e6d5c3]"
+        class="px-3 py-2 rounded-[10px] text-sm transition-colors hover:bg-white/10 hover:opacity-80">Projects</a>
+
+      <span class="mx-2 h-5 w-px bg-white/20" aria-hidden="true"></span>
+
+      <div class="flex items-center gap-1">
+        <a class="p-2 hover:opacity-80 transition-opacity" href="https://www.linkedin.com/in/daniel-diazgarcia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="/assets/linkedin.png" class="w-5 h-5 sm:w-6 sm:h-6" alt="LinkedIn">
+        </a>
+        <a class="p-2 hover:opacity-80 transition-opacity" href="https://github.com/danieldiaz98" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="/assets/github.png" class="w-5 h-5 sm:w-6 sm:h-6" alt="GitHub">
+        </a>
+        <a class="p-2 hover:opacity-80 transition-opacity" href="mailto:danieldiaz.g98@gmail.com" aria-label="Email">
+          <img src="/assets/mail.png" class="w-5 h-5 sm:w-6 sm:h-6" alt="Email">
+        </a>
+      </div>
+    </div>
+
+    <button type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-menu"
+      [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+      class="sm:hidden p-2 rounded-[10px] border border-white/40 bg-white/5 hover:bg-white/10 transition-colors">
+      @if (menuOpen()) {
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path stroke-linecap="round" d="m6 18 12-12M6 6l12 12" />
+        </svg>
+      } @else {
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+        </svg>
+      }
+    </button>
+  </div>
+
+  @if (menuOpen()) {
+    <div id="mobile-menu" class="sm:hidden border-t border-white/20 bg-zinc-900/95 backdrop-blur-md px-4 pb-4">
+      <div class="flex flex-col gap-1 pt-3">
+        <a routerLink="/" routerLinkActive="bg-white/10 text-[#e6d5c3]" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()"
+          class="px-3 py-2 rounded-[10px] text-sm transition-colors hover:bg-white/10">Home</a>
+        <a routerLink="/projects" routerLinkActive="bg-white/10 text-[#e6d5c3]" (click)="closeMenu()"
+          class="px-3 py-2 rounded-[10px] text-sm transition-colors hover:bg-white/10">Projects</a>
+      </div>
+      <div class="flex items-center gap-4 pt-3 mt-3 border-t border-white/20">
+        <a class="p-2 hover:opacity-80 transition-opacity" href="https://www.linkedin.com/in/daniel-diazgarcia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="/assets/linkedin.png" class="w-6 h-6" alt="LinkedIn">
+        </a>
+        <a class="p-2 hover:opacity-80 transition-opacity" href="https://github.com/danieldiaz98" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="/assets/github.png" class="w-6 h-6" alt="GitHub">
+        </a>
+        <a class="p-2 hover:opacity-80 transition-opacity" href="mailto:danieldiaz.g98@gmail.com" aria-label="Email">
+          <img src="/assets/mail.png" class="w-6 h-6" alt="Email">
+        </a>
+      </div>
+    </div>
+  }
+</nav>
